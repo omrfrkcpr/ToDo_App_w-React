@@ -64,7 +64,7 @@ p.textCompleted {
 
   .task > input,
   .task p {
-    width: 75px !important;
+    width: 65% !important;
     overflow: hidden;
   }
 }
