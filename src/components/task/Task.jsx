@@ -20,6 +20,12 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
     setEditedTitle(event.target.value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleSaveEdit();
+    }
+  };
+
   const handleSaveEdit = () => {
     if (editedTitle.trim() !== "") {
       // Güncellenmiş task'ı iletiyoruz
@@ -41,7 +47,7 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
   };
 
   return (
-    <div className="task d-flex justify-content-between align-items-center w-75 m-auto">
+    <div className="task d-flex justify-content-between align-items-center m-auto">
       <button className="checkContainer" onClick={handleToggleCompletion}>
         {task.isCompleted ? (
           <BsFillCheckCircleFill style={{ color: "purple" }} />
@@ -57,6 +63,7 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
           value={editedTitle}
           onChange={handleInputChange}
           autoFocus
+          onKeyDown={handleKeyDown}
         />
       ) : (
         <p

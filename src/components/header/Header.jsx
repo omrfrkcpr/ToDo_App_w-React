@@ -23,7 +23,7 @@ export function Header({ handleAddTask }) {
 
   return (
     <header className="header d-flex justify-content-center align-items-center position-relative">
-      <img src={todoLogo} alt="logo" style={{ width: "100px" }} />
+      <img src={todoLogo} alt="logo" style={{ width: "150px" }} />
 
       <form onSubmit={handleSubmit} className="newTaskForm">
         <input
@@ -32,7 +32,7 @@ export function Header({ handleAddTask }) {
           onChange={onChangeTitle}
           value={title}
         />
-        <button className="fs-5 text-white">
+        <button className=" text-white">
           Add <AiOutlinePlusCircle size={20} />
         </button>
       </form>

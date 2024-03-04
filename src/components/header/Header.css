@@ -58,3 +58,19 @@
   background: var(--color-font-purple);
   transition-duration: 0.5s;
 }
+
+@media only screen and (max-width: 450px) {
+  .newTaskForm {
+    font-size: smaller !important;
+  }
+
+  .newTaskForm input {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .newTaskForm button {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}

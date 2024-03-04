@@ -20,14 +20,19 @@ function App() {
   console.log(tasksLength); //! todos length
 
   const addTask = (taskTitle) => {
-    const newTask = {
-      id: Date.now(),
-      title: taskTitle,
-      isCompleted: false,
-    };
-    const newTasks = [...tasks, newTask];
-    setTasks(newTasks);
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+    const isDuplicate = tasks.some((task) => task.title === taskTitle);
+
+    if (!isDuplicate) {
+      const newTask = {
+        id: Date.now(),
+        title: taskTitle,
+        isCompleted: false,
+      };
+
+      const newTasks = [...tasks, newTask];
+      setTasks(newTasks);
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+    } else alert("Please enter a different todo");
   };
 
   const deleteTaskById = (taskId) => {
@@ -50,7 +55,7 @@ function App() {
   };
 
   return (
-    <div className="container w-75 d-flex flex-column">
+    <div className="container d-flex flex-column">
       <Header handleAddTask={addTask} />
       <Tasks
         tasks={tasks}

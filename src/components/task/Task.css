@@ -4,6 +4,7 @@
   padding: 5px 20px;
   border-radius: 10px;
   gap: 12px;
+  width: 75%;
 }
 
 .task p {
@@ -19,7 +20,7 @@
   font-size: 20px;
   line-height: 19px;
   color: var(--color-black);
-
+  width: 75%;
   margin: 0.8rem auto 0.7rem 0 !important;
 }
 
@@ -54,4 +55,16 @@ p.textCompleted {
   background: none;
   border: none;
   color: #808080;
+}
+
+@media only screen and (max-width: 450px) {
+  .task {
+    width: 100% !important;
+  }
+
+  .task > input,
+  .task p {
+    width: 75px !important;
+    overflow: hidden;
+  }
 }

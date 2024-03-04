@@ -30,3 +30,16 @@ button {
 input:focus {
   outline: none;
 }
+
+@media only screen and (max-width: 345px) {
+  body {
+    font-size: smaller !important;
+    width: smaller !important;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .container {
+    display: none !important;
+  }
+}
