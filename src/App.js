@@ -6,7 +6,7 @@ import "./App.css";
 
 const LOCAL_STORAGE_KEY = "todo:tasks";
 
-function App() {
+const App = () => {
   const [tasks, setTasks] = useState(() => {
     const savedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
     return savedTasks ? JSON.parse(savedTasks) : [];
@@ -65,6 +65,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;
