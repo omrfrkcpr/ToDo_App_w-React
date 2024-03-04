@@ -24,10 +24,6 @@
   font-weight: 700;
 }
 
-.textPurple {
-  color: #8284fa !important;
-}
-
 .header span {
   background: #333333;
   color: #d9d9d9;
@@ -41,4 +37,6 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  background-color: #bfa8b3;
+  border-radius: 10px;
 }

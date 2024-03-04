@@ -1,20 +1,21 @@
 .task {
-  background: #262626;
-  border: 1px solid #333333;
+  background: var(--color-bg-purple);
+  border: inherit;
   padding: 5px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   gap: 12px;
 }
 
 .task p {
-  font-size: 14px;
+  font-size: 20px;
   line-height: 19px;
+  margin-top: 1rem !important;
   color: #f2f2f2;
   margin-right: auto;
 }
 
 p.textCompleted {
-  color: #808080;
+  color: #999999;
   text-decoration: line-through;
 }
 
@@ -29,7 +30,8 @@ p.textCompleted {
   width: 100%;
   height: 100%;
   border-radius: 999px;
-  border: 2px solid #4ea8de;
+  margin-top: 0.2rem;
+  border: 2px solid var(--color-font-purple);
 }
 
 .checkContainer svg {
@@ -42,4 +44,8 @@ p.textCompleted {
   background: none;
   border: none;
   color: #808080;
+}
+
+.deleteButton:hover {
+  color: red !important;
 }

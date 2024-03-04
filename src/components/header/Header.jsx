@@ -1,4 +1,4 @@
-import todoLogo from "../../assets/todoLogo.svg";
+import todoLogo from "../../assets/todo-logo.png";
 import "./Header.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { useState } from "react";
@@ -8,6 +8,10 @@ export function Header({ handleAddTask }) {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    if (title.trim() === "") {
+      return alert("Please enter your todo");
+    }
 
     handleAddTask(title);
     setTitle("");
@@ -19,7 +23,7 @@ export function Header({ handleAddTask }) {
 
   return (
     <header className="header d-flex justify-content-center align-items-center position-relative">
-      <img src={todoLogo} alt="logo" />
+      <img src={todoLogo} alt="logo" style={{ width: "100px" }} />
 
       <form onSubmit={handleSubmit} className="newTaskForm">
         <input
@@ -28,7 +32,7 @@ export function Header({ handleAddTask }) {
           onChange={onChangeTitle}
           value={title}
         />
-        <button>
+        <button className="fs-5 text-white">
           Create <AiOutlinePlusCircle size={20} />
         </button>
       </form>

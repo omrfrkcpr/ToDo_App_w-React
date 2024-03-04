@@ -9,12 +9,12 @@ export function Tasks({ tasks, onDelete, onComplete }) {
     <section className="tasks w-100">
       <header className="header d-flex align-items-center justify-content-between">
         <div>
-          <p className="mt-3">Created tasks</p>
+          <p className="text-white mt-3">Created tasks</p>
           <span>{tasksQuantity}</span>
         </div>
 
         <div>
-          <p className="textPurple mt-3">Completed tasks</p>
+          <p className="text-white mt-3">Completed tasks</p>
           <span>
             {completedTasks} of {tasksQuantity}
           </span>

@@ -1,6 +1,15 @@
+:root {
+  --color-light-purple: #bfa8b3;
+  --color-button-purple: #a680a3;
+  --color-bg-purple: #8b5a8c;
+  --color-font-purple: #542d59;
+  --color-black: #0d0d0d;
+}
+
 .header {
-  background: #0d0d0d;
+  background: var(--color-bg-purple);
   height: 200px;
+  border-radius: 10px;
 }
 
 .newTaskForm {
@@ -17,23 +26,23 @@
 .newTaskForm input {
   height: 100%;
   flex: 1;
-  color: #fff;
-  background: #262626;
-  border: 1px solid #0d0d0d;
+  color: var(--color-font-purple);
+  background: var(--color-light-purple);
+  border: 1px solid var(--color-bg-purple) !important;
   border-radius: 8px;
   padding: 0 16px;
   font-size: 16px;
 }
 
 .newTaskForm input::placeholder {
-  color: #808080;
+  color: var(--color-font-purple);
 }
 
 .newTaskForm button {
   height: 100%;
   padding: 0 16px;
-  background: #1e6f9f;
-  color: #fff;
+  background: var(--color-button-purple);
+  color: var(--color-font-purple);
   border: none;
   border-radius: 8px;
   display: flex;
@@ -41,4 +50,9 @@
   gap: 6px;
   font-weight: 700;
   font-size: 14px;
+}
+
+.newTaskForm button:hover {
+  background: var(--color-font-purple);
+  transition-duration: 0.5s;
 }
