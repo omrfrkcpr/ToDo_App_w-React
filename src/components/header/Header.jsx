@@ -35,6 +35,7 @@ export function Header({ handleAddTask }) {
           type="text"
           onChange={onChangeTitle}
           value={title}
+          className="main-input"
         />
         <button className=" text-white">
           Add <AiOutlinePlusCircle size={20} />

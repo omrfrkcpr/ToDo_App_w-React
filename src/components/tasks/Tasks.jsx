@@ -40,13 +40,20 @@ export function Tasks({ tasks, onDelete, onComplete, onEdit }) {
         <button
           className="btn clear-btn border-2"
           onClick={() => {
-            if (
-              window.confirm(
-                "Are you sure you want to clear your entire todo list permanently?"
-              )
-            ) {
-              handleClear();
-              window.location.reload();
+            if (document.querySelector(".list").childElementCount > 0) {
+              if (
+                window.confirm(
+                  "Are you sure you want to clear your entire todo list permanently?"
+                )
+              ) {
+                handleClear();
+                window.location.reload();
+              }
+            } else {
+              alert(
+                "There is no task on your to-do list. Please enter something before clearing"
+              );
+              document.querySelector(".main-input").focus();
             }
           }}
         >
