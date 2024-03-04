@@ -37,10 +37,8 @@ input:focus {
     font-size: smaller !important;
     width: smaller !important;
   }
-}
 
-/* @media only screen and (max-width: 280px) {
-  body {
-    display: none !important;
+  .container {
+    margin: 0 1rem !important;
   }
-} */
+}
