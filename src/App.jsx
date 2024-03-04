@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Header } from "./components/header/Header";
 import { Tasks } from "./components/tasks/Tasks";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,16 +8,19 @@ const LOCAL_STORAGE_KEY = "todo:tasks";
 
 const App = () => {
   const [tasks, setTasks] = useState(() => {
-    const savedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
-    return savedTasks ? JSON.parse(savedTasks) : [];
+    // if any tasks doesnt exist in local storage, then create empty array for default useState value for tasks
+    const savedTasks =
+      JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+    return savedTasks;
   });
 
-  // console.log(localStorage[LOCAL_STORAGE_KEY]);
-  // const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
-  // const tasksArray = JSON.parse(tasksString);
-  // const tasksLength = tasksArray.length;
-  // console.log(tasksLength); //! todos length
+  // Update local storage
+  const saveTasksToLocalStorage = useCallback((updatedTasks) => {
+    setTasks(updatedTasks);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedTasks));
+  }, []);
 
+  // add new task
   const addTask = (taskTitle) => {
     const isDuplicate = tasks.some((task) => task.title === taskTitle);
 
@@ -29,25 +32,25 @@ const App = () => {
       };
 
       const newTasks = [...tasks, newTask];
-      setTasks(newTasks);
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+      saveTasksToLocalStorage(newTasks);
     } else alert("Please enter a different todo");
   };
 
+  // delete task
   const deleteTaskById = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
-    setTasks(newTasks);
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+    saveTasksToLocalStorage(newTasks);
   };
 
+  // toggle task complete status
   const toggleTaskCompletedById = (taskId) => {
     const newTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, isCompleted: !task.isCompleted } : task
     );
-    setTasks(newTasks);
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
+    saveTasksToLocalStorage(newTasks);
   };
 
+  // edit task title
   const editTaskById = (taskId, newTitle) => {
     const updatedTasks = tasks.map((task) => {
       if (task.id === taskId) {
@@ -56,8 +59,7 @@ const App = () => {
       return task;
     });
 
-    setTasks(updatedTasks);
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedTasks));
+    saveTasksToLocalStorage(updatedTasks);
   };
 
   return (
