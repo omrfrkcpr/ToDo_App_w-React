@@ -50,7 +50,9 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
     <div className="task d-flex justify-content-between align-items-center m-auto">
       <button className="checkContainer" onClick={handleToggleCompletion}>
         {task.isCompleted ? (
-          <BsFillCheckCircleFill style={{ color: "purple" }} />
+          <BsFillCheckCircleFill
+            style={{ color: "purple", width: "18px", marginBottom: "10px" }}
+          />
         ) : (
           <div />
         )}
