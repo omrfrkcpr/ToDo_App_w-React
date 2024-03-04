@@ -8,12 +8,12 @@ export function Tasks({ tasks, onDelete, onComplete, onEdit }) {
   return (
     <section className="tasks w-100">
       <header className="header d-flex align-items-center justify-content-between w-75 mx-auto bg-white">
-        <div>
+        <div className="taskStatics">
           <p className=" mt-3">Created tasks</p>
           <span>{tasksQuantity}</span>
         </div>
 
-        <div>
+        <div className="taskStatics">
           <p className=" mt-3">Completed tasks</p>
           <span>
             {completedTasks} of {tasksQuantity}

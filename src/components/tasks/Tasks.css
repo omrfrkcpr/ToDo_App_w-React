@@ -1,7 +1,6 @@
 .tasks {
   max-width: 736px;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto 0;
   padding: 0 1rem;
   max-height: 400px !important;
 }
@@ -12,7 +11,7 @@
   padding: 0 1rem;
 }
 
-.header > div {
+.header > .taskStatics {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,5 +80,21 @@
   .header p,
   .header span {
     font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 306px) {
+  .tasks > .header {
+    display: block !important;
+    padding: 0;
+  }
+
+  .tasks > .header p {
+    font-size: 12px !important;
+  }
+
+  .header > .taskStatics {
+    height: 30px !important;
+    width: auto !important;
   }
 }
