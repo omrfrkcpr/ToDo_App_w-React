@@ -13,7 +13,7 @@ export function Header({ handleAddTask }) {
       return alert("Please enter your todo");
     }
 
-    handleAddTask(title);
+    handleAddTask(title.trim());
     setTitle("");
   }
 
