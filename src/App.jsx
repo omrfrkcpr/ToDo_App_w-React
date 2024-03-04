@@ -12,6 +12,7 @@ const App = () => {
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
 
+  console.log(localStorage[LOCAL_STORAGE_KEY]);
   // const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
   // const tasksArray = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   const tasksLength = JSON.parse(
@@ -49,9 +50,16 @@ const App = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
   };
 
-  const editTaskById = (taskId) => {
-    const currentTitle = tasks.filter((task) => task.id === taskId);
-    console.log(currentTitle);
+  const editTaskById = (taskId, newTitle) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === taskId) {
+        return { ...task, title: newTitle };
+      }
+      return task;
+    });
+
+    setTasks(updatedTasks);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedTasks));
   };
 
   return (
