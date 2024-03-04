@@ -3,6 +3,7 @@ import { Header } from "./components/header/Header";
 import { Tasks } from "./components/tasks/Tasks";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Footer from "./components/footer/Footer";
 
 const LOCAL_STORAGE_KEY = "todo:tasks";
 
@@ -71,6 +72,7 @@ const App = () => {
         onComplete={toggleTaskCompletedById}
         onEdit={editTaskById}
       />
+      <Footer />
     </div>
   );
 };
