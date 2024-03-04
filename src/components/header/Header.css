@@ -1,11 +1,3 @@
-:root {
-  --color-light-purple: #bfa8b3;
-  --color-button-purple: #a680a3;
-  --color-bg-purple: #8b5a8c;
-  --color-font-purple: #542d59;
-  --color-black: #0d0d0d;
-}
-
 .header {
   background: var(--color-bg-purple);
   height: 200px;

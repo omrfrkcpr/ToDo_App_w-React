@@ -1,3 +1,12 @@
+:root {
+  --color-light-purple: #bfa8b3;
+  --color-light-purple-opacity: #bfa8b3c2;
+  --color-button-purple: #a680a3;
+  --color-bg-purple: #8b5a8c;
+  --color-font-purple: #542d59;
+  --color-black: #0d0d0d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +20,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
-  background-color: var(--color-light-purple);
+  background-color: var(--color-light-purple-opacity);
 }
 
 body {
