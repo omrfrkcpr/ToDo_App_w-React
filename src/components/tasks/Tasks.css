@@ -61,6 +61,17 @@
   background-color: #555;
 }
 
+.clear-btn {
+  background-color: var(--color-font-purple) !important;
+  color: white !important;
+}
+
+.clear-btn:hover {
+  background-color: var(--color-button-purple) !important;
+  color: black !important;
+  border-color: var(--color-font-purple) !important;
+}
+
 @media only screen and (max-width: 564px) {
   .tasks > .header {
     width: 90% !important;
