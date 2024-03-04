@@ -13,11 +13,9 @@ const App = () => {
   });
 
   console.log(localStorage[LOCAL_STORAGE_KEY]);
-  // const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
-  // const tasksArray = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-  const tasksLength = JSON.parse(
-    localStorage.getItem(LOCAL_STORAGE_KEY)
-  ).length;
+  const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
+  const tasksArray = JSON.parse(tasksString);
+  const tasksLength = tasksArray.length;
   console.log(tasksLength); //! todos length
 
   const addTask = (taskTitle) => {
