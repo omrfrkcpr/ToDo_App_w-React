@@ -39,7 +39,7 @@ input:focus {
 }
 
 @media only screen and (max-width: 280px) {
-  .container {
+  body {
     display: none !important;
   }
 }
