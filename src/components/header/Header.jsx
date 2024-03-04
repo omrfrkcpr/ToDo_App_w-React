@@ -23,7 +23,11 @@ export function Header({ handleAddTask }) {
 
   return (
     <header className="header d-flex justify-content-center align-items-center position-relative">
-      <img src={todoLogo} alt="logo" style={{ width: "150px" }} />
+      <img
+        src={todoLogo}
+        alt="logo"
+        style={{ width: "150px", marginBottom: "1rem" }}
+      />
 
       <form onSubmit={handleSubmit} className="newTaskForm">
         <input
