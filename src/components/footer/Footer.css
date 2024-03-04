@@ -25,7 +25,7 @@
   font-size: 0.8rem !important;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   .left {
     writing-mode: vertical-lr;
     bottom: 1rem;
@@ -40,5 +40,32 @@
   .instagram,
   .github {
     font-size: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .footer {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .left {
+    position: relative;
+    order: 2;
+    margin: 0 0.25rem 0 0.5rem;
+    bottom: 0;
+  }
+
+  .right {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0;
+  }
+
+  .right > h5 {
+    font-size: 0.5rem !important;
+    margin: 0;
+    padding: 0;
   }
 }
