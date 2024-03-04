@@ -12,11 +12,11 @@ const App = () => {
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
 
-  console.log(localStorage[LOCAL_STORAGE_KEY]);
-  const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
-  const tasksArray = JSON.parse(tasksString);
-  const tasksLength = tasksArray.length;
-  console.log(tasksLength); //! todos length
+  // console.log(localStorage[LOCAL_STORAGE_KEY]);
+  // const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
+  // const tasksArray = JSON.parse(tasksString);
+  // const tasksLength = tasksArray.length;
+  // console.log(tasksLength); //! todos length
 
   const addTask = (taskTitle) => {
     const isDuplicate = tasks.some((task) => task.title === taskTitle);
