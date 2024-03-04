@@ -19,7 +19,7 @@
 }
 
 .header p {
-  color: #4ea8de;
+  color: var(--color-font-purple);
   font-size: 14px;
   font-weight: 700;
 }

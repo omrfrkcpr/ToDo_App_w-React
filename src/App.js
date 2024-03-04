@@ -12,6 +12,13 @@ function App() {
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
 
+  // const tasksString = localStorage.getItem(LOCAL_STORAGE_KEY);
+  // const tasksArray = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  const tasksLength = JSON.parse(
+    localStorage.getItem(LOCAL_STORAGE_KEY)
+  ).length;
+  console.log(tasksLength); //! todos length
+
   const addTask = (taskTitle) => {
     const newTask = {
       id: Date.now(),
@@ -37,13 +44,19 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
   };
 
+  const editTaskById = (taskId) => {
+    const currentTitle = tasks.filter((task) => task.id === taskId);
+    console.log(currentTitle);
+  };
+
   return (
-    <div className="container d-flex flex-column">
+    <div className="container w-75 d-flex flex-column">
       <Header handleAddTask={addTask} />
       <Tasks
         tasks={tasks}
         onDelete={deleteTaskById}
         onComplete={toggleTaskCompletedById}
+        onEdit={editTaskById}
       />
     </div>
   );
