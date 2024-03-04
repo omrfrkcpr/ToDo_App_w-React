@@ -52,6 +52,7 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
         {task.isCompleted ? (
           <BsFillCheckCircleFill
             style={{ color: "purple", width: "18px", marginBottom: "10px" }}
+            className="checkCircle"
           />
         ) : (
           <div />
@@ -82,9 +83,15 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
             size={20}
             style={{ color: "white" }}
             onClick={handleSaveEdit}
+            className="checkCircleFill"
           />
         ) : (
-          <FaEdit size={20} style={{ color: "white" }} onClick={handleEdit} />
+          <FaEdit
+            size={20}
+            style={{ color: "white" }}
+            onClick={handleEdit}
+            className="editIcon"
+          />
         )}
       </button>
 
@@ -95,7 +102,7 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
           onDelete(task.id)
         }
       >
-        <TbTrash size={20} style={{ color: "white" }} />
+        <TbTrash size={20} style={{ color: "white" }} className="trashIcon" />
       </button>
     </div>
   );

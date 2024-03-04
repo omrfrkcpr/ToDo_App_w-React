@@ -24,6 +24,24 @@
   margin: 0.8rem auto 0.7rem 0 !important;
 }
 
+.checkCircleFill:hover {
+  color: rgb(57, 197, 57) !important;
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+}
+
+.editIcon:hover {
+  color: orange !important;
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+}
+
+.trashIcon:hover {
+  color: rgb(142, 23, 23) !important;
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+}
+
 p.textCompleted {
   color: #999999;
   text-decoration: line-through;
@@ -58,11 +76,40 @@ p.textCompleted {
 @media only screen and (max-width: 450px) {
   .task {
     width: 100% !important;
+    padding: 0px 20px;
   }
 
   .task > input,
-  .task p {
+  .task > p {
     width: 65% !important;
     overflow: hidden;
+    font-size: 1rem !important;
+    line-height: 10px;
+    font-size: 15px !important;
+  }
+
+  .task > p {
+    padding: 5px 0;
+    margin-top: 1rem !important;
+  }
+
+  .task > input {
+    padding: 1px 0 !important;
+    margin: 1rem auto 0.7rem 0 !important;
+  }
+
+  .checkContainer {
+    width: 13px;
+    height: 13px;
+  }
+
+  .checkCircle {
+    width: 13px !important;
+  }
+
+  .checkCircleFill,
+  .editIcon,
+  .trashIcon {
+    width: 18px !important;
   }
 }
