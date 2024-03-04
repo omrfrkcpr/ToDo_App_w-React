@@ -27,13 +27,13 @@ export function Header({ handleAddTask }) {
 
       <form onSubmit={handleSubmit} className="newTaskForm">
         <input
-          placeholder="Add a new task"
+          placeholder="What do you need to do?"
           type="text"
           onChange={onChangeTitle}
           value={title}
         />
         <button className="fs-5 text-white">
-          Create <AiOutlinePlusCircle size={20} />
+          Add <AiOutlinePlusCircle size={20} />
         </button>
       </form>
     </header>
