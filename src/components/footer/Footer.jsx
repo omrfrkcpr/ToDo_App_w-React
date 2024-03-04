@@ -53,7 +53,15 @@ const Footer = () => {
         </ul>
       </div>
       <div className="right bg-secondary">
-        <h5>Copyright &copy; by Ömer Faruk CAPUR</h5>
+        <h5>
+          Copyright &copy; by{" "}
+          <span
+            onMouseOver={(e) => (e.target.style.color = "black")}
+            onMouseOut={(e) => (e.target.style.color = "white")}
+          >
+            Ömer Faruk CAPUR
+          </span>
+        </h5>
       </div>
     </div>
   );
