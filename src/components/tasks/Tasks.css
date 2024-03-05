@@ -64,6 +64,7 @@
 .clear-btn {
   background-color: var(--color-font-purple) !important;
   color: white !important;
+  z-index: 9999 !important;
 }
 
 .clear-btn:hover {
