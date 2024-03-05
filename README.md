@@ -43,6 +43,8 @@ ToDo_App_w-React(folder)
 
 ## Outcome
 
+![todo-react-app](https://github.com/omrfrkcpr/ToDo_App_w-React/assets/77440899/f5ea89b9-eea2-482e-a55a-43811f186bce)
+
 ## Objective
 
 Build an sıngle-page application that allows us to create and organize to-do lists in an interactive way.
