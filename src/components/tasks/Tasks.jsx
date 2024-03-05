@@ -36,7 +36,7 @@ export function Tasks({ tasks, onDelete, onComplete, onEdit }) {
         ))}
       </div>
 
-      <div className="clear mt-3 text-center">
+      <div className="clear mt-4 text-center">
         <button
           className="btn clear-btn border-2"
           onClick={() => {

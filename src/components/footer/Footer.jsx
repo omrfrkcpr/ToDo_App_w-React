@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="d-flex justify-content-between align-items-center footer">
+    <div className="d-flex justify-content-between align-items-center footer mt-5">
       <div className="left">
         <ul className="social-medias list-unstyled d-flex flex-column">
           <li>
