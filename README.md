@@ -47,7 +47,32 @@ ToDo_App_w-React(folder)
 
 ## Objective
 
-Build an sıngle-page application that allows us to create and organize to-do lists in an interactive way.
+**Epic User Story:** Build an Interactive Single-Page Todo Application
+
+**User Stories:**
+
+1. **Add a new todo:**
+   - Implement a text input field for entering new todos.
+   - Implement an "Add" button to add the new todo to the list.
+   - Ensure that new todos are saved to local storage when added.
+   - Implement functionality to render todos from local storage upon page reload.
+2. **Edit existing todos:**
+   - Implement an "Edit" button for each todo item.
+   - Implement a modal or inline editing functionality for todos.
+   - Implement functionality to allow the user to change the name of a todo using the edit button.
+   - Ensure that edited todos are updated in local storage.
+3. **Delete existing todos:**
+   - Implement a "Delete" button for each todo item.
+   - Implement a confirmation prompt before deleting a todo.
+   - Ensure that deleted todos are removed from local storage.
+4. **Clear all todos:**
+   - Implement a "Clear All" button to delete all todos.
+   - Implement a confirmation prompt before clearing all todos.
+   - Ensure that all todos are cleared from local storage.
+
+**Additional Requirement:**
+
+- The application should have a responsive design.
 
 ### At the end of the project, following topics are to be covered;
 
