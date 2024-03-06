@@ -28,12 +28,12 @@ export function Task({ task, onDelete, onComplete, onEdit }) {
 
   const handleSaveEdit = () => {
     if (editedTitle.trim() !== "") {
-      // Güncellenmiş task'ı iletiyoruz
+      // edited task title 
       onEdit(task.id, editedTitle);
       setIsEditing(false);
-      setEditedTitle(editedTitle); // Input değerini sıfırla
+      setEditedTitle(editedTitle); 
 
-      // LocalStorage'daki veriyi güncelle
+      // update localstorage with the new task title
       const updatedTasks = JSON.parse(localStorage.getItem("todo:tasks")).map(
         (t) => {
           if (t.id === task.id) {

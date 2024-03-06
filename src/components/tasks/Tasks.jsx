@@ -24,6 +24,7 @@ export function Tasks({ tasks, onDelete, onComplete, onEdit }) {
         </div>
       </header>
 
+      {/* render all tasks that saved or added */}
       <div className="list">
         {tasks.map((task) => (
           <Task
