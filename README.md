@@ -6,6 +6,10 @@ https://my-reactjs-todo-app.netlify.app/
 
 The project aims to create the To-Do List application I wrote before with ReactJS and React-Bootstrap.
 
+## Outcome
+
+![todo-react-app](https://github.com/omrfrkcpr/ToDo_App_w-React/assets/77440899/f5ea89b9-eea2-482e-a55a-43811f186bce)
+
 ## Project Planning & Management
 
 **Epic User Story:** Build an Interactive Single-Page Todo Application
@@ -69,10 +73,6 @@ ToDo_App_w-React(folder)
 ├── readme.md
 └── todo-react-app.gif
 ```
-
-## Outcome
-
-![todo-react-app](https://github.com/omrfrkcpr/ToDo_App_w-React/assets/77440899/f5ea89b9-eea2-482e-a55a-43811f186bce)
 
 ## Objective
 
