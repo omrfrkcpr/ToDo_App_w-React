@@ -4,7 +4,7 @@
 
 ## Description
 
-The project aims to create the To-Do List application I wrote before with ReactJS and React-Bootstrap.
+This project entails building an Interactive Single-Page Todo Application. Users can add new todos with a text input field and an "Add" button. The application saves todos to local storage and renders them upon page reload. It also allows users to edit existing todos using an "Edit" button, which triggers modal or inline editing functionality. Deletion of todos is facilitated by a "Delete" button with a confirmation prompt. Additionally, there's a "Clear All" button to delete all todos, also with a confirmation prompt. The application features a responsive design for optimal user experience across devices.
 
 ## Outcome 🎦
 
